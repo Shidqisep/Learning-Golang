@@ -15,4 +15,8 @@ func main() {
 	jumlahYangTerCopy := copy(slice2,sliceMobil)
 	fmt.Println(slice2)
 	fmt.Println(jumlahYangTerCopy)
+
+	mySlice := append(slice2, "Mitsubishi")
+	fmt.Println(slice2)
+	fmt.Println(mySlice)
 }
