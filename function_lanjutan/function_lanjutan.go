@@ -28,16 +28,24 @@ func registerUser(name string, blacklist Blacklist) string {
 }
 
 func factorialLoop(num int)int{
-	result := 0
-	for i := num; i  >= 0; i-- {
+	result := 1
+	for i := num; i  > 0; i-- {
 		result *= i 
 	}
 	return result
 }
 
+func factorialRecursive(num int)int{
+	 if num == 0 {
+		return 1
+	}
+	return num * factorialRecursive(num - 1)
+}
+
 func main() {
 	fmt.Println(sayHelloWithFilter("Shidqi Anjing Banget", spamFilter))
 	fmt.Println(factorialLoop(5))
+	fmt.Println(factorialRecursive(5))
 
 	//anonymous function. jadi functionnya langsung kita bikin saat registerUser
 
